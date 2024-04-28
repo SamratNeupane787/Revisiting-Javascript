@@ -14,4 +14,7 @@ let faksd = true;
 //symbol => uniqueness we talk about symbol
 
 //object
-console.log(typeof age);
+console.log(typeof undefined); //undefined
+console.log(typeof null); //object
+
+/// null is the object
