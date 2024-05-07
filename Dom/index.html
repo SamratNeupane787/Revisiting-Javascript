@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM learning</title>
+  </head>
+  <body id="back">
+    <div id="bg-black">
+      <h1 class="heading">DOM learning on!!</h1>
+      <p>Lorem ipsum dolor sit amet.</p>
+      <ul>
+        <li>one</li>
+        <li>two</li>
+        <li>three</li>
+      </ul>
+    </div>
+  </body>
+  <script>
+    //innertext show only visible content
+    //innerhtml show the html code inside that element
+    //textContent show all visible and non visible text in that selected element
+    const heading = document
+      .getElementById("back")
+      .setAttribute("class", "test");
+
+    let divData = document.getElementById("bg-black");
+    divData.style = "background-color:red";
+
+    console.log(document.querySelector("h1"));
+    document.querySelector(".heading");
+
+    document.querySelector("#back");
+  </script>
+</html>
