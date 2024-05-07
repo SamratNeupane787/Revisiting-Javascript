@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="background-color: #1c1c1c">
+    <input id="text" />
+    <button id="btn-1">Create Div</button>
+    <div id="dataBlock"></div>
+  </body>
+
+  <script>
+    // const div = document.createElement("div");
+
+    // div.setAttribute("id", "background");
+    // div.className = "main";
+    // div.id = Math.random() * 9 + 1;
+    // console.log(div);
+    // div.style.backgroundColor = "green";
+    // div.style.padding = "12px";
+    // const addText = document.createTextNode("Div Added!");
+    // div.appendChild(addText);
+    // document.body.appendChild(div);
+
+    const btn = document.getElementById("btn-1");
+    const data = document.getElementById("text");
+    const dataBlock = document.querySelector("#dataBlock");
+    btn.addEventListener("click", () => {
+      const valueofData = data.value;
+      const newDiv = document.createElement("div");
+      newDiv.setAttribute("id", "newDiv");
+      newDiv.style.backgroundColor = "green";
+      newDiv.style.padding = "12px";
+      newDiv.style.margin = "10px";
+      const addText = document.createTextNode(`${valueofData} is added!!`);
+      newDiv.appendChild(addText);
+      dataBlock.appendChild(newDiv);
+    });
+  </script>
+</html>
