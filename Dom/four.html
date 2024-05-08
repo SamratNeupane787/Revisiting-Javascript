@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="background-color: #1c1c1c; color: white">
+    <input id="text" />
+    <button id="btn-1">Add Language</button>
+    <ul id="language">
+      <li>Javascript</li>
+    </ul>
+  </body>
+  <script>
+    const btn = document.querySelector("#btn-1");
+    const insideUl = document.querySelector("#language");
+    const data = document.getElementById("text");
+
+    btn.addEventListener("click", function addTolist() {
+      const newValue = data.value;
+      console.log(newValue);
+      const newLi = document.createElement("li");
+      const addText = document.createTextNode(`${newValue}`);
+      newLi.appendChild(addText);
+      newLi.setAttribute("class", "lia");
+      newLi.style.backgroundColor = "red";
+      newLi.style.padding = "12px";
+      newLi.style.margin = "12px";
+      insideUl.appendChild(newLi);
+      //   const btnNew = document.createElement("button");
+      //   btnNew.setAttribute("id", "deleteBtn");
+      //   const addBtnText = document.createTextNode("remove");
+      //   btnNew.appendChild(addBtnText);
+      //   btnNew.style.margin = "32px";
+      //   const litext = document.querySelector(".lia");
+      //   litext.appendChild(btnNew);
+      //   console.log(insideUl);
+      const seclanguage = document.querySelector("li:nth-child(2)");
+      const newli = document.createElement("li");
+      newli.textContent = "Mojo";
+      seclanguage.replaceWith(newli);
+      const firstlan = document.querySelector("li:first-child");
+      const newlist = document.createElement("li");
+      newlist.textContent = "JS/TS";
+      firstlan.replaceWith(newlist);
+
+      //remove
+
+      const langlang = document.querySelector("li:last-child");
+      langlang.remove(langlang);
+    });
+
+    //edit
+  </script>
+</html>
