@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CloudYUuup</title>
+  </head>
+  <body style="background-color: black; color: white">
+    <h1>Hello Ji</h1>
+    <button id="stop">Stop</button>
+  </body>
+
+  <script>
+    setTimeout(() => {
+      //set timeout le yeti 1 choti ask garcha deko time interval ma
+      console.log("hello ji");
+    }, 2000);
+
+    const changeText = () => {
+      document.querySelector("h1").innerHTML = "New Heading";
+    };
+
+    const changeh1 = setTimeout(changeText, 2000);
+
+    const btn = document.getElementById("stop");
+    btn.addEventListener("click", () => {
+      clearTimeout(changeh1);
+      console.log("stopped");
+    });
+  </script>
+</html>
