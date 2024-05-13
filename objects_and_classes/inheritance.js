@@ -26,4 +26,4 @@ const masalaChai = new User("masalaChai");
 
 masalaChai.logMe();
 
-console.log(funda == masalaChai); //false
+console.log(funda === masalaChai); //false
